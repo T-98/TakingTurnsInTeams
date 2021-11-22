@@ -1498,7 +1498,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' A basic attack with no restrictions'
+  m_Text: Unleashes lightning at an enemy dealing 20 damage and inflicts paralysis
+    (Renders the opponent immobile for a turn).
 --- !u!222 &485499061
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2505,7 +2506,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 103
+    m_FontSize: 79
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -2516,7 +2517,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Attack
+  m_Text: Lightning Strike
 --- !u!222 &690592457
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2796,8 +2797,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: A heavy strike that does a significant amount of damage, in return you
-    miss out of your next turn.
+  m_Text: Throws a fireball at an enemy, dealing 30 damage.
 --- !u!222 &800997417
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3269,7 +3269,7 @@ GameObject:
   - component: {fileID: 889922399}
   - component: {fileID: 889922398}
   m_Layer: 5
-  m_Name: Attack
+  m_Name: Lightning Strike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3457,7 +3457,7 @@ GameObject:
   - component: {fileID: 899442361}
   - component: {fileID: 899442360}
   m_Layer: 5
-  m_Name: Taunt
+  m_Name: Group Heal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6758,7 +6758,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 122
+    m_FontSize: 86
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -6769,7 +6769,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Taunt
+  m_Text: Group Heal
 --- !u!222 &1917253540
 CanvasRenderer:
   m_ObjectHideFlags: 0
