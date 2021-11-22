@@ -8,12 +8,14 @@ public class PlayerController : MonoBehaviour
     public List<GameObject> enemies;
     private Vector3 initialPos;
     private bool isAttacking = false;
-    private int selectPlayer = 0;
-    private int selectEnemy = 0;
+    private GameObject currentPlayer;
+    private GameObject currentEnemy;
     // Start is called before the first frame update
     void Start()
     {
-        initialPos = players[selectPlayer].transform.position;
+        initialPos = players[0].transform.position;
+        currentPlayer = players[0];
+        currentEnemy = enemies[0];
     }
 
     // Update is called once per frame
@@ -21,7 +23,7 @@ public class PlayerController : MonoBehaviour
     {
         if(isAttacking == true)
         {
-            if (players[selectPlayer].transform.position.x < enemies[selectEnemy].transform.position.x - 1.2)
+            if (currentPlayer.transform.position.x < currentEnemy.transform.position.x - 1.2)
             {
                 PlayerMove("attack");
             }
@@ -29,7 +31,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (players[selectPlayer].transform.position.x > initialPos.x)
+            if (currentPlayer.transform.position.x > initialPos.x)
             {
                 PlayerMove("retreat");
             }
@@ -41,44 +43,31 @@ public class PlayerController : MonoBehaviour
     {
         if(state.Equals("attack"))
         {
-            Vector2 position = players[selectPlayer].transform.position;
+            Vector2 position = currentPlayer.transform.position;
             position.x = position.x + 0.008f;
             //position.y = position.y + 0.1f;
-            players[selectPlayer].transform.position = position;
+            currentPlayer.transform.position = position;
 
         }
         else
         {
-            Vector2 position = players[selectPlayer].transform.position;
+            Vector2 position = currentPlayer.transform.position;
             position.x = position.x - 0.008f;
             //position.y = position.y + 0.1f;
-            players[selectPlayer].transform.position = position;
+            currentPlayer.transform.position = position;
         }
 
     }
 
-    public void PlayerSelect(string which)
+    public void PlayerSelect(GameObject other)
     {
-      if(which.Equals("player2"))
-        {
-            selectPlayer = 1;
-        }
-      else
-        {
-            selectPlayer = 0;
-        }
+        currentPlayer = other;
+        Debug.Log("Selected Player");
     }
 
-    public void EnemySelect(string which)
+    public void EnemySelect(GameObject other)
     {
-        if (which.Equals("enemy2"))
-        {
-            selectEnemy = 1;
-        }
-        else
-        {
-            selectEnemy = 0;
-        }
+        currentEnemy = other;
         isAttacking = true;
     }
 }
