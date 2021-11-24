@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Mage : MonoBehaviour
 {
+    public double health = 150, damage, incomingDamage, speed;
     public GameObject canvas;
     // Start is called before the first frame update
     void Start()
