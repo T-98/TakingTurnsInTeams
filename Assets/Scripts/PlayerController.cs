@@ -45,6 +45,8 @@ public class PlayerController : MonoBehaviour
         {
             Vector2 position = currentPlayer.transform.position;
             position.x = position.x + 0.008f;
+            if (currentPlayer.transform.position.y == currentEnemy.transform.position.y) Debug.Log("");
+            else position.y = position.y + 0.002f;
             //position.y = position.y + 0.1f;
             currentPlayer.transform.position = position;
 
@@ -53,7 +55,8 @@ public class PlayerController : MonoBehaviour
         {
             Vector2 position = currentPlayer.transform.position;
             position.x = position.x - 0.008f;
-            //position.y = position.y + 0.1f;
+            if (currentPlayer.transform.position.y == currentEnemy.transform.position.y) Debug.Log("");
+            else position.y = position.y - 0.008f;
             currentPlayer.transform.position = position;
         }
 
