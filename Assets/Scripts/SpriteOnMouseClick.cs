@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class SpriteOnMouseClick : MonoBehaviour
 {
-    public GameObject sprite;
-    public GameObject playercontroller;
+    //public GameObject playercontroller;
+    public CombatSystem system;
     // Start is called before the first frame update
     void OnMouseDown()
     {
-        if (sprite.tag == "player")
-        {
-            playercontroller.GetComponent<PlayerController>().PlayerSelect(sprite);
-            if (sprite.name == "Warrior") sprite.GetComponent<Warrior>().enableWarriorCanvas();
-            if (sprite.name == "Mage") Debug.Log("Set canvas active");
+        //disable all canvas
+        Character chara = this.GetComponent<Character>();
+        if(chara.hasMove()) {
+            system.selectedChara(chara);
+            //enable the canvas for this character
+            Debug.Log(this);
         }
-        else playercontroller.GetComponent<PlayerController>().EnemySelect(sprite);
     }
 }
