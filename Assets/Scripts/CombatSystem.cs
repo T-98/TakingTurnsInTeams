@@ -48,6 +48,7 @@ public class CombatSystem : MonoBehaviour
         thief.Reset();
         mage.Reset();
         moves = new Dictionary<Character, int>();
+       // warrior.canvas = 
         warrior.disableCanvas();
         thief.disableCanvas();
         mage.disableCanvas();

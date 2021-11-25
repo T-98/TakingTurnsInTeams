@@ -11,7 +11,7 @@ public class Character : MonoBehaviour
 
     public bool avaTurn;
 
-    public Canvas Canvas;
+    public GameObject canvas;
 
     public void takeDamage(int dmg) {
         currHP -= dmg;
@@ -36,16 +36,16 @@ public class Character : MonoBehaviour
         avaTurn = false;
     }
 
-    public void setCanvas(Canvas canva) {
-        Canvas = canva;
+   /* public void setCanvas(GameObject canva) {
+        canvas = canva;
     }
-
+   */
     public void enableCanvas() {
-        Canvas.enabled = true;
+        canvas.SetActive(true);
     }
 
     public void disableCanvas() {
-        Canvas.enabled = false;
+        canvas.SetActive(false);
     }
 
     public void Reset() {
