@@ -46,6 +46,7 @@ public class CombatSystem : MonoBehaviour
 
     void SetUp() {
         enemy.Reset();
+        enemy.usedMove();
         warrior.Reset();
         thief.Reset();
         mage.Reset();

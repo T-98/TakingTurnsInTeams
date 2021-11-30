@@ -11,7 +11,7 @@ public class Character : MonoBehaviour
     public Dictionary<int, string> abilities;
     public int health, maxHealth, damage = 0, incomingDamage = 0, speed = 0, decSpeed = 0, dmgIncrease = 0;
     public int hpPot = 2, item1, item2;
-
+    public Animator anim;
     public Dictionary<int, string> getAbilities()
     {
         return abilities;

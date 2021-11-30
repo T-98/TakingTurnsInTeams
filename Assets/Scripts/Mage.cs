@@ -12,6 +12,8 @@ public class Mage : Character
         Debug.Log(this.name + " attacked " + enemy.name);
         enemy.EnemyTakeDamage(damage + dmgIncrease, this);
         dmgIncrease = 0;
+        anim = GetComponent<Animator>();
+        anim.enabled = true;
     }
     private void Start()
     {
