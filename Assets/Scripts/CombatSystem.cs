@@ -75,12 +75,11 @@ public class CombatSystem : MonoBehaviour
 
     public void OnAttackClick(int atkID) {
         if(selected.hasMove()) {
-            //Use atkID to know which button was pressed
-            //atkID is the key to the dictionary in respective character classes
-            //Use it when different moves are being implemented
+            if(atkID > 3 && !selected.hasRemaining(atkID)) {
+                return;
+            }
             selected.usedMove();
             moves.Add(selected, atkID);
-            //Debug.Log(selected.name + " selected attack " + atkID + " => "+ selected.getAbilities()[atkID]);
             selected.disableCanvas();
         }
     }

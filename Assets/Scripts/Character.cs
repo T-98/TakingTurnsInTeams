@@ -10,7 +10,7 @@ public class Character : MonoBehaviour
     public HealthBar hpBar;
     public Dictionary<int, string> abilities;
     public int health, maxHealth, damage = 0, incomingDamage = 0, speed = 0, decSpeed = 0, dmgIncrease = 0;
-    public int hpPot = 2;
+    public int hpPot = 2, item1, item2;
 
     public Dictionary<int, string> getAbilities()
     {
@@ -81,6 +81,29 @@ public class Character : MonoBehaviour
 
     public void dmgInc(int val) {
         dmgIncrease += val;
+    }
+
+    public bool hasRemaining(int id) {
+        switch(id) {
+            case 4:
+                if(hpPot > 0) {
+                    return true;
+                }
+                break;
+            case 5:
+                if(item1 > 0) {
+                    return true;
+                }
+                break;
+            case 6:
+                if(item2 > 0) {
+                    return true;
+                }
+                break;
+            default:
+                return false;
+        }
+        return false;
     }
 
     public virtual void attack() {
