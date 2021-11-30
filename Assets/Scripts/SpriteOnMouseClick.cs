@@ -14,7 +14,7 @@ public class SpriteOnMouseClick : MonoBehaviour
         if(chara.hasMove()) {
             system.selectedChara(chara);
             //enable the canvas for this character
-            Debug.Log(this);
+            //Debug.Log(this);
         }
     }
 }

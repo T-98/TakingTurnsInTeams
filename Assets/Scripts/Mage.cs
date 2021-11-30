@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Mage : Character
 {
-    public Character enemy, warrior, thief;
+    public Enemy enemy;
+    public Character warrior, thief;
     private string[] abilityNames = { "Searing Flames", "Electrical Surge", "Infusion", "Haste", "Health Potion", "Sacred Ash"};
-    private int health = 100, damage = 0, incomingDamage = 0, speed = 0, decSpeed = 0;
+
     public override void attack() {
-        enemy.takeDamage(damage);
         Debug.Log(this.name + " attacked " + enemy.name);
+        enemy.EnemyTakeDamage(damage, this);
     }
     private void Start()
     {
+        health = 100;
         loadAbilities();
         checkAbilities();
     }
@@ -45,29 +47,32 @@ public class Mage : Character
     public void searingflames()
     {
         damage = 40;
-        speed = 6;
+        speed = 6 + decSpeed;
+        decSpeed = 0;
     }
 
     //A devastating lightning attack that does 20 damage, the Boss� attack next turn is increased by 3, Speed:7
     public void electricalsurge()
     {
         damage = 20;
-        speed = 7;
+        speed = 7 + decSpeed;
+        decSpeed = 0;
         //increase bosses's atkdmg
     }
 
     //A group heal that heals everyone for 30 HP, Speed: 8
     public void infusion()
     {
-        speed = 8;
+        speed = 8 + decSpeed;
+        decSpeed = 0;
         //group heal
     }
 
     //A buff that decreases all party members� speed by 2 in the next turn, Speed : 8
     public void haste()
     {
-        speed = 8;
-        decSpeed = 2;
+        speed = 8 + decSpeed;
+        decSpeed -= 2;
     }
 
     //Health Potion x2 - Recovers 50 HP
@@ -94,6 +99,9 @@ public class Mage : Character
 
             case 3:
                 Debug.Log("Decrease speed of all characetrs by 2 in the next turn");
+                speedChange(-2);
+                warrior.speedChange(-2);
+                thief.speedChange(-2);
                 break;
 
             case 4:
@@ -117,9 +125,5 @@ public class Mage : Character
                 attack();
                 break;
         }
-    }
-
-    public override int getSpeed() {
-        return speed + decSpeed;
     }
 }

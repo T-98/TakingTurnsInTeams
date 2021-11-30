@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class Thief : Character
 {
-    public Character enemy;
+    public Enemy enemy;
+    public Character warrior, mage;
     private string[] abilityNames = { "Quick Stab", "Roll the Dice", "Rage Swipes", "Coin Toss", "Health Potion", "Final Feint", "Lucky Charm" };
-    private int health = 60, damage = 0, incomingDamage = 0, speed = 0, decSpeed = 0;
+    public bool lucky = false;
 
     public override void attack() {
         Debug.Log(this.name + " attacked " + enemy.name);
-        enemy.takeDamage(10);
+        enemy.EnemyTakeDamage(damage, this);
     }
     private void Start()
     {
+        health = 60;
         loadAbilities();
         checkAbilities();
     }
@@ -36,26 +38,30 @@ public class Thief : Character
     public void quickstab()
     {
         damage = 40;
-        speed = 1;
+        speed = 1 + decSpeed;
+        decSpeed = 0;
     }
 
     //Randomly obtain a number from 1 to 6. Your party will receive a buff dependent on the number you receive. The higher the number the better the buff, Speed 2
     public void rolldice()
     {
-        speed = 2;
+        speed = 2 + decSpeed;
+        decSpeed = 0;
     }
 
     //A multi-strike attack that does 25 damage each hit up to 4 times. Each hit is dependent on luck (rolls a number from 0 to 4), Speed: 2 (avg:50)
     //(random buff dmg adds on top of final value) 
     public void rageswipes()
     {
-        speed = 2;
+        speed = 2 + decSpeed;
+        decSpeed = 0;
     }
 
     //Flip a coin, If heads deal 70 damage. If tails deal 0 damage, Speed: 2
     public void cointoss()
     {
-        speed = 2;
+        speed = 2 + decSpeed;
+        decSpeed = 0;
     }
 
     //Health Potion x2 - Recovers 50 HP
@@ -95,12 +101,21 @@ public class Thief : Character
                 switch (randomNumber)
                 {
                     //this is where these go
-                    case 1: //decrease team speed by 1 next turn 
+                    case 1: //decrease team speed by 1 next turn
+                        diceSpeed(-1);
+                        break;
                     case 2: //decrease team speed by 2 next turn
+                        diceSpeed(-2);
+                        break;
                     case 3: //decrease team speed by 3 next turn
+                        diceSpeed(-3);
+                        break;
                     case 4: //increase team damage by 10 next turn
+                        break;
                     case 5: //increase team damage by 20 next turn
+                        break;
                     case 6: //increase team damage by 30 next turn
+                        break;
 
                     default:
                         Debug.Log("Die Rolled");
@@ -109,7 +124,7 @@ public class Thief : Character
                 break;
 
             case 2: //rage swipes
-                int randomNum = UnityEngine.Random.Range(0, 5);
+                int randomNum = Random.Range(1, 5);
                 //randomnumber will decide how many times to trigger the anim
                 damage = randomNum * 25;
                 attack();
@@ -118,7 +133,7 @@ public class Thief : Character
                 break;
 
             case 3://coin toss
-                int coin = UnityEngine.Random.Range(0, 2);
+                int coin = Random.Range(0, 2);
                 if (coin == 0) damage = 70; // heads
                 else damage = 0; //tails
                 attack();
@@ -152,7 +167,9 @@ public class Thief : Character
         }
     }
 
-    public override int getSpeed() {
-        return speed + decSpeed;
+    private void diceSpeed(int val) {
+        speedChange(val);
+        warrior.speedChange(val);
+        mage.speedChange(val);
     }
 }

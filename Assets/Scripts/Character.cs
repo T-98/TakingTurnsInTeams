@@ -8,13 +8,14 @@ public class Character : MonoBehaviour
     public bool avaTurn;
     public GameObject canvas;
     public Dictionary<int, string> abilities;
+    public int health, damage = 0, incomingDamage = 0, speed = 0, decSpeed = 0;
 
     public Dictionary<int, string> getAbilities()
     {
         return abilities;
     }
 
-    public void takeDamage(double dmg) {
+    public virtual void takeDamage(int dmg) {
         //currHP -= dmg;
         //check for death here
         Debug.Log(charaName + " took " + dmg + " dmg");
@@ -27,7 +28,9 @@ public class Character : MonoBehaviour
         Debug.Log(this.charaName + " has died!");
     }
 
-    public void refreshTurn() {
+    public virtual void refreshTurn() {
+        damage = 0;
+        speed = 0;
         avaTurn = true;
     }
 
@@ -51,11 +54,19 @@ public class Character : MonoBehaviour
         return avaTurn;
     }
 
+    public bool isAlive() {
+        return health > 0;
+    }
+
+    public void speedChange(int val) {
+        decSpeed -= val;
+    }
+
     public virtual void attack() {
         Debug.Log("you shouldn't be here");
     }
 
     public virtual void execute(int val) { }
 
-    public virtual int getSpeed() { return 999999; }
+    public int getSpeed() { return speed + decSpeed; }
 }

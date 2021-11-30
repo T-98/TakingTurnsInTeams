@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class Warrior : Character
 {
-    public Character enemy;
+    public Enemy enemy;
     private string[] abilityNames = {"Raging Blow", "Power Slash", "Taunt", "Crescent Shield", "Health Potion", "Berzerker Potion", "Sacrificial Pact"};
-    private int health = 150, damage = 0, incomingDamage = 0, speed = 0, decSpeed = 0;
+    public bool berserk = false;
 
     public override void attack() {
         Debug.Log(this.name + " attacked " + enemy.name);
-        enemy.takeDamage(10);
+        enemy.EnemyTakeDamage(damage + ((berserk) ? 20 : 0), this);
     }
 
     private void Start()
     {
+        health = 150;
         loadAbilities();
         //checkAbilities();
     }
@@ -66,9 +67,8 @@ public class Warrior : Character
     public void bersekerpotion()
     {
         speed = 1;
-        incomingDamage = 10;
-        damage += 20;
-        Debug.Log("health: " + health + "\n damage: " + damage + "\n speed: " + speed + "\n incomingDamage: " + incomingDamage);
+        incomingDamage += 10;
+        berserk = true;
     }
 
     //Sacrificial Pact x1 - Kill your character in order to regen the rest of your party members to full health
@@ -78,64 +78,52 @@ public class Warrior : Character
         speed = 1;
     }
 
-    public void damagetaken(int damage, int speed)
-    {
-        incomingDamage += damage;
-        health -= incomingDamage;
-        this.speed -= speed;
-        Debug.Log("health: " + health + "\n damage: " + damage + "\n speed: " + this.speed + "\n incomingDamage: " + incomingDamage);
+    public override void takeDamage(int dmg) {
+        health -= dmg + incomingDamage;
+        wasused = false;
     }
 
     //Blocks 30 damage for next attack, Speed: 2
     public void crescentshield()
     {
-        damagereset();
-        incomingDamage -= 30;
-        speed = 2;
+        speed = 2 + decSpeed;
+        decSpeed = 0;
         wasused = true;
-        Debug.Log("health: " + health + " damage: " + damage + " speed: " + speed + " incomingDamage: " + incomingDamage);
     }
 
     //A normal basic attack that does 20 damage, Speed: 3
     public void powerslash()
     {
-        if (wasused == true) incomingDamagereset();
-        damagereset();
-        damage += 20;
-        speed = 3;
-        Debug.Log("health: " + health + " damage: " + damage + " speed: " + speed + " incomingDamage: " + incomingDamage);
+        damage = 20;
+        speed = 3 + decSpeed;
+        decSpeed = 0;
     }
 
     //A slow but hefty attack that allows you to do 40 damage, Speed: 10
     public void ragingblow()
     {
-        if (wasused == true) incomingDamagereset();
-        damagereset();
-        damage += 40;
-        speed = 10;
-        Debug.Log("health: " + health + "\n damage: " + damage + "\n speed: " + speed + "\n incomingDamage: " + incomingDamage);
+        damage = 40;
+        speed = 10 + decSpeed;
+        decSpeed = 0;
     }
 
     //Takes aggro of the enemy to use their next ability on warrior (aoe moves are not affected), Speed : 2
     public void taunt()
     {
-        if (wasused == true) incomingDamagereset();
-        damagereset();
-        //change enemy target varibale to warrior
+        speed = 1 + decSpeed;
+        decSpeed = 0;
     }
 
-    private void incomingDamagereset()
-    {
-        incomingDamage = 0;
-    }
-    private void damagereset()
-    {
-        damage = 0;
-    }
     public override void execute(int val)
     {
         switch (val)
         {
+            case 2:
+                enemy.pickTarget(this);
+                break;
+            case 3:
+                incomingDamage -= 30;
+                break;
             case 4:
                 if (health == 150) Debug.Log("cannot use potion");
                 else
@@ -160,7 +148,11 @@ public class Warrior : Character
         }
     }
 
-    public override int getSpeed() {
-        return speed + decSpeed;
+    public override void refreshTurn() {
+        damage = 0;
+        speed = 0;
+        incomingDamage = ((berserk) ? 10 : 0) + ((wasused) ? -30 : 0);
+        wasused = false;
+        avaTurn = true;
     }
 }

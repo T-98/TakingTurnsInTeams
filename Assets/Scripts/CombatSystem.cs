@@ -79,7 +79,7 @@ public class CombatSystem : MonoBehaviour
             //Use it when different moves are being implemented
             selected.usedMove();
             moves.Add(selected, atkID);
-            Debug.Log(selected.name + " selected attack " + atkID + " => "+ selected.getAbilities()[atkID]);
+            //Debug.Log(selected.name + " selected attack " + atkID + " => "+ selected.getAbilities()[atkID]);
             selected.disableCanvas();
         }
     }
@@ -87,8 +87,14 @@ public class CombatSystem : MonoBehaviour
     //speedsystem dict => //make a new dictionary with atk names "selected.getAbilities()[atkID]" and respective speeds
     public void EnemyPhase() {
         //change this to pick random target
-        enemy.pickTarget(warrior);
-        moves.Add(enemy, 0);
+
+        List<Character> alive = new List<Character>();
+        if(warrior.isAlive()) alive.Add(warrior);
+        if(mage.isAlive()) alive.Add(mage);
+        if(thief.isAlive()) alive.Add(thief);
+        enemy.pickTarget(alive[Random.Range(0,3)]);
+
+        moves.Add(enemy, Random.Range(0, 5));
         
         state = State.COMBATPHASE;
 
@@ -127,7 +133,6 @@ public class CombatSystem : MonoBehaviour
 
         foreach (KeyValuePair<Character, int> move in sortedMoves) {
             Debug.Log(move.Key);
-            Debug.Log(move.Value);
             move.Key.execute(move.Value);
         }
 
