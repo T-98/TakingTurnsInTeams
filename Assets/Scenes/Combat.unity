@@ -3182,7 +3182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &599160586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3486,10 +3486,13 @@ MonoBehaviour:
   incomingDamage: 0
   speed: 0
   decSpeed: 0
+  dmgIncrease: 0
+  hpPot: 2
   enemy: {fileID: 674034264}
   warrior: {fileID: 1243564689}
   mage: {fileID: 1722571298}
   lucky: 0
+  feint: 0
 --- !u!114 &653315898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3516,8 +3519,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: -0.0045843124, y: -0.017984595}
+  m_Size: {x: 0.35824955, y: 0.41325647}
   m_Direction: 0
 --- !u!1 &674034259
 GameObject:
@@ -3655,6 +3658,8 @@ MonoBehaviour:
   incomingDamage: 0
   speed: 0
   decSpeed: 0
+  dmgIncrease: 0
+  hpPot: 2
   warrior: {fileID: 1243564689}
   mage: {fileID: 1722571298}
   thief: {fileID: 653315897}
@@ -6553,8 +6558,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: 0.006177525, y: -0.09223857}
+  m_Size: {x: 0.3204696, y: 0.4935281}
   m_Direction: 0
 --- !u!114 &1243564689
 MonoBehaviour:
@@ -6578,7 +6583,11 @@ MonoBehaviour:
   incomingDamage: 0
   speed: 0
   decSpeed: 0
+  dmgIncrease: 0
+  hpPot: 2
   enemy: {fileID: 674034264}
+  mage: {fileID: 1722571298}
+  thief: {fileID: 653315897}
   berserk: 0
 --- !u!1 &1268658609
 GameObject:
@@ -8278,8 +8287,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: -0.0022926673, y: -0.0289401}
+  m_Size: {x: 0.28949133, y: 0.4270083}
   m_Direction: 0
 --- !u!114 &1722571298
 MonoBehaviour:
@@ -8303,6 +8312,8 @@ MonoBehaviour:
   incomingDamage: 0
   speed: 0
   decSpeed: 0
+  dmgIncrease: 0
+  hpPot: 2
   enemy: {fileID: 674034264}
   warrior: {fileID: 1243564689}
   thief: {fileID: 653315897}

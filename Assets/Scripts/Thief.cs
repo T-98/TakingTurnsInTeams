@@ -8,17 +8,30 @@ public class Thief : Character
     public Character warrior, mage;
     private string[] abilityNames = { "Quick Stab", "Roll the Dice", "Rage Swipes", "Coin Toss", "Health Potion", "Final Feint", "Lucky Charm" };
     public bool lucky = false;
+    public bool feint = false;
 
     public override void attack() {
         Debug.Log(this.name + " attacked " + enemy.name);
         enemy.EnemyTakeDamage(damage, this);
     }
+
+    public override void takeDamage(int dmg) {
+        health -= dmg;
+        hpBar.SetHealth(health);
+        if(health < 0 && feint) {
+            health = maxHealth;
+            feint = false;
+        }
+        hpBar.SetHealth(health);
+    }
+
     private void Start()
     {
         hpBar.SetMaxHealth(maxHealth);
         loadAbilities();
         //checkAbilities();
     }
+
     private void loadAbilities()
     {
         abilities = new Dictionary<int, string>();
@@ -101,12 +114,20 @@ public class Thief : Character
                         diceSpeed(-3);
                         break;
                     case 4: //increase team damage by 10 next turn
+                        dmgInc(10);
+                        warrior.dmgInc(10);
+                        mage.dmgInc(10);
                         break;
                     case 5: //increase team damage by 20 next turn
+                        dmgInc(20);
+                        warrior.dmgInc(20);
+                        mage.dmgInc(20);
                         break;
                     case 6: //increase team damage by 30 next turn
+                        dmgInc(30);
+                        warrior.dmgInc(30);
+                        mage.dmgInc(30);
                         break;
-
                     default:
                         Debug.Log("Die Rolled");
                         break;
@@ -114,48 +135,35 @@ public class Thief : Character
                 break;
 
             case 2: //rage swipes
-                int randomNum = Random.Range(1, 5);
+                int randomNum = (lucky) ? 4 : Random.Range(1, 5);
+                lucky = false;
                 //randomnumber will decide how many times to trigger the anim
                 damage = randomNum * 25;
                 attack();
-                Debug.Log(randomNum + " Rage Swipes inflicted "+ damage +" damage");
                 damage = 0;
                 break;
-
             case 3://coin toss
-                int coin = Random.Range(0, 2);
+                int coin = (lucky) ? 1 : Random.Range(0, 2);
+                lucky = false;
                 if (coin == 0) damage = 70; // heads
                 else damage = 0; //tails
                 attack();
                 //trigger animation
                 break;
-
             case 4:
-                if (health == 60) Debug.Log("cannot use potion");
-                else
-                {
-                    health += 50;
-                    if (health > 60) health = 60;
-                    Debug.Log("healed");
-                }
-                Debug.Log("health: " + health + "\n damage: " + damage + "\n speed: " + speed + "\n incomingDamage: " + incomingDamage);
+                health += 50;
+                if (health > 60) health = 60;
                 break;
-
             case 5:
-                //declare a state variable called resurrection, set it to true and check on death if true, then 
-                //full hp
-                Debug.Log("Resurrect on 0 HP");
+                feint = true;
                 break;
-
             case 6:
-                Debug.Log("Increase Luck");
+                lucky = true;
                 break;
-
             default:
                 attack();
                 break;
         }
-        Debug.Log("Thief used " + abilityNames[val]);
     }
 
     private void diceSpeed(int val) {

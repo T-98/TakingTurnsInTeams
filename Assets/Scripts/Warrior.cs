@@ -5,6 +5,7 @@ using UnityEngine;
 public class Warrior : Character
 {
     public Enemy enemy;
+    public Character mage, thief;
     private string[] abilityNames = {"Raging Blow", "Power Slash", "Taunt", "Crescent Shield", "Health Potion", "Berzerker Potion", "Sacrificial Pact"};
     public bool berserk = false;
 
@@ -116,28 +117,23 @@ public class Warrior : Character
                 incomingDamage -= 30;
                 break;
             case 4:
-                if (health == 150) Debug.Log("cannot use potion");
-                else
-                {
-                    health += 50;
-                    if (health > 150) health = 150;
-                    Debug.Log("healed");
-                }
-                Debug.Log("health: " + health + "\n damage: " + damage + "\n speed: " + speed + "\n incomingDamage: " + incomingDamage);
-
+                health += 50;
+                if (health > 150) health = 150;
+                hpPot--;
                 break;
-
+            case 5:
+                //play berserk animation
+                break;
             case 6:
                 health = 0;
                 death();
-                Debug.Log("health: " + health + "\n damage: " + damage + "\n speed: " + speed + "\n incomingDamage: " + incomingDamage);
+                mage.heal(99999);
+                thief.heal(99999);
                 break;
-
             default:
                 attack();
                 break;
         }
-        Debug.Log("Warrior used " + abilityNames[val]);
     }
 
     public override void refreshTurn() {

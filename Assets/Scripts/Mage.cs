@@ -10,7 +10,8 @@ public class Mage : Character
 
     public override void attack() {
         Debug.Log(this.name + " attacked " + enemy.name);
-        enemy.EnemyTakeDamage(damage, this);
+        enemy.EnemyTakeDamage(damage + dmgIncrease, this);
+        dmgIncrease = 0;
     }
     private void Start()
     {
@@ -47,7 +48,6 @@ public class Mage : Character
         damage = 20;
         speed = 7 + decSpeed;
         decSpeed = 0;
-        //increase bosses's atkdmg
     }
 
     //A group heal that heals everyone for 30 HP, Speed: 8
@@ -80,41 +80,33 @@ public class Mage : Character
     {
         switch(val)
         {
+            case 1:
+                enemy.speedChange(3);
+                attack();
+                break;
             case 2:
                 heal(30);
                 warrior.heal(30);
                 thief.heal(30);
                 attack();
                 break;
-
             case 3:
-                Debug.Log("Decrease speed of all characetrs by 2 in the next turn");
                 speedChange(-2);
                 warrior.speedChange(-2);
                 thief.speedChange(-2);
                 break;
-
             case 4:
-                if (health == 150) Debug.Log("cannot use potion");
-                else
-                {
-                    health += 50;
-                    if (health > 150) health = 150;
-                    Debug.Log("healed");
-                }
-                Debug.Log("health: " + health + "\n damage: " + damage + "\n speed: " + speed + "\n incomingDamage: " + incomingDamage);
+                health += 50;
+                if (health > 150) health = 150;
                 break;
-
             case 5:
                 heal(50);
                 warrior.heal(50);
                 thief.heal(50);
                 break;
-
             default:
                 attack();
                 break;
         }
-        Debug.Log("Mage used " + abilityNames[val]);
     }
 }

@@ -9,7 +9,8 @@ public class Character : MonoBehaviour
     public GameObject canvas;
     public HealthBar hpBar;
     public Dictionary<int, string> abilities;
-    public int health, maxHealth, damage = 0, incomingDamage = 0, speed = 0, decSpeed = 0;
+    public int health, maxHealth, damage = 0, incomingDamage = 0, speed = 0, decSpeed = 0, dmgIncrease = 0;
+    public int hpPot = 2;
 
     public Dictionary<int, string> getAbilities()
     {
@@ -65,7 +66,11 @@ public class Character : MonoBehaviour
     }
 
     public void speedChange(int val) {
-        decSpeed -= val;
+        decSpeed += val;
+    }
+
+    public void dmgInc(int val) {
+        dmgIncrease += val;
     }
 
     public virtual void attack() {
