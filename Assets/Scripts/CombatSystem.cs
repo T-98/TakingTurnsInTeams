@@ -141,7 +141,7 @@ public class CombatSystem : MonoBehaviour
 
         foreach (KeyValuePair<Character, int> move in sortedMoves) {
             Debug.Log(move.Key);
-            move.Key.execute(move.Value);
+            if(move.Key.isAlive())move.Key.execute(move.Value);
         }
 
         //yield return new WaitForSeconds(2f);
