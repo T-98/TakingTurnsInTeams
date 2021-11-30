@@ -15,7 +15,6 @@ public class Warrior : Character
 
     private void Start()
     {
-        health = 150;
         loadAbilities();
         //checkAbilities();
     }
@@ -44,16 +43,6 @@ public class Warrior : Character
         {
             Debug.Log("trigger death scene");
             Destroy(this);
-        }
-    }
-
-    public override void heal(int val)
-    {
-        if (health == 150) Debug.Log("cannot heal any further");
-        else
-        {
-            health+= val;
-            if (health > 150) health = 150;
         }
     }
 
@@ -146,6 +135,7 @@ public class Warrior : Character
                 attack();
                 break;
         }
+        Debug.Log("Warrior used " + abilityNames[val]);
     }
 
     public override void refreshTurn() {

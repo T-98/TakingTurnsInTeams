@@ -94,7 +94,10 @@ public class CombatSystem : MonoBehaviour
         if(thief.isAlive()) alive.Add(thief);
         enemy.pickTarget(alive[Random.Range(0,3)]);
 
-        moves.Add(enemy, Random.Range(0, 5));
+        int randomMove = Random.Range(0, 5);
+
+        moves.Add(enemy, randomMove);
+        enemy.setSpeed(randomMove);
         
         state = State.COMBATPHASE;
 

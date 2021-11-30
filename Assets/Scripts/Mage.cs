@@ -14,9 +14,8 @@ public class Mage : Character
     }
     private void Start()
     {
-        health = 100;
         loadAbilities();
-        checkAbilities();
+        //checkAbilities();
     }
     private void loadAbilities()
     {
@@ -31,16 +30,6 @@ public class Mage : Character
     void checkAbilities()
     {
         foreach (KeyValuePair<int, string> kv in abilities) Debug.Log(kv.Value.ToString());
-    }
-
-    public override void heal(int val)
-    {
-        if (health == 100) Debug.Log("cannot heal any further");
-        else
-        {
-            health += val;
-            if (health > 100) health = 100;
-        }
     }
 
     //A strong fire magic spell that does 40 damage, Speed: 6
@@ -125,5 +114,6 @@ public class Mage : Character
                 attack();
                 break;
         }
+        Debug.Log("Mage used " + abilityNames[val]);
     }
 }

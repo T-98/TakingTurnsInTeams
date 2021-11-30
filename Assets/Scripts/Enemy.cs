@@ -10,16 +10,11 @@ public class Enemy : Character
     public bool reflection = false;
 
     void Start() {
-        health = 500;
         avaTurn = false;
     }
 
     public void pickTarget(Character tar) {
         target = tar;
-    }
-
-    public override void heal(int val) {
-        health = ((health + val) > 500) ? 500 : health + val;
     }
 
     public override void attack() {
@@ -35,29 +30,58 @@ public class Enemy : Character
         }
     }
 
+    public void setSpeed(int id) {
+        switch(id) {
+            case 0:
+                damage = 20;
+                speed = 5;
+                break;
+            case 1:
+                damage = 50;
+                speed = 8;
+                break;
+            case 2:
+                speed = 2;
+                break;
+            case 3:
+                speed = 2;
+                break;
+            case 4:
+                speed = 7;
+                break;
+            default:
+                break;
+        }
+    }
+
     public override void execute(int val) {
         switch(val) {
             case 0:
                 //earthquake
-                aoeAtk(20, 2);
+                aoeAtk(damage, 2);
+                Debug.Log("enemy used earthquake");
                 break;
             case 1:
                 //single strike
-                target.takeDamage(50);
+                target.takeDamage(damage);
+                Debug.Log("enemy used single strike");
                 break;
             case 2:
                 //enrage
                 heal(150);
                 speedChange(-2);
+                Debug.Log("enemy used enrage");
                 break;
             case 3:
                 //inspire
                 immune = true;
-                aoeAtk(10, 0);
+                aoeAtk(damage, 0);
+                Debug.Log("enemy used inspire");
                 break;
             case 4:
                 //reflect
                 reflection = true;
+                Debug.Log("enemy used reflect");
                 break;
             default:
                 break;

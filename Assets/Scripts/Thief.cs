@@ -15,9 +15,8 @@ public class Thief : Character
     }
     private void Start()
     {
-        health = 60;
         loadAbilities();
-        checkAbilities();
+        //checkAbilities();
     }
     private void loadAbilities()
     {
@@ -80,16 +79,6 @@ public class Thief : Character
     public void luckycharm()
     {
         speed = 1;
-    }
-
-    public override void heal(int val)
-    {
-        if (health == 60) Debug.Log("cannot heal any further");
-        else
-        {
-            health += val;
-            if (health > 60) health = 60;
-        }
     }
 
     public override void execute(int val)
@@ -165,6 +154,7 @@ public class Thief : Character
                 attack();
                 break;
         }
+        Debug.Log("Thief used " + abilityNames[val]);
     }
 
     private void diceSpeed(int val) {

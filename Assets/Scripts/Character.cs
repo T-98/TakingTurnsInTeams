@@ -8,7 +8,7 @@ public class Character : MonoBehaviour
     public bool avaTurn;
     public GameObject canvas;
     public Dictionary<int, string> abilities;
-    public int health, damage = 0, incomingDamage = 0, speed = 0, decSpeed = 0;
+    public int health, maxHealth, damage = 0, incomingDamage = 0, speed = 0, decSpeed = 0;
 
     public Dictionary<int, string> getAbilities()
     {
@@ -21,7 +21,9 @@ public class Character : MonoBehaviour
         Debug.Log(charaName + " took " + dmg + " dmg");
     }
 
-    public virtual void heal(int val) { }
+    public void heal(int val) {
+        health = ((health + val) > maxHealth) ? maxHealth : health + val;
+    }
 
     public void death() {
         //play death animation here
