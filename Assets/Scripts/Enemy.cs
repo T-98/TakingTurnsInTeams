@@ -10,6 +10,7 @@ public class Enemy : Character
     public bool reflection = false;
 
     void Start() {
+        hpBar.SetMaxHealth(maxHealth);
         avaTurn = false;
     }
 
@@ -25,6 +26,7 @@ public class Enemy : Character
 
     public void EnemyTakeDamage(int dmg, Character chara) {
         health -= (immune) ? 0 : dmg;
+        hpBar.SetHealth(health);
         if(reflection) {
             chara.takeDamage((immune) ? 0 : Mathf.FloorToInt(dmg / 2));
         }

@@ -14,6 +14,7 @@ public class Mage : Character
     }
     private void Start()
     {
+        hpBar.SetMaxHealth(maxHealth);
         loadAbilities();
         //checkAbilities();
     }

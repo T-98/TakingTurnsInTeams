@@ -15,6 +15,7 @@ public class Warrior : Character
 
     private void Start()
     {
+        hpBar.SetMaxHealth(maxHealth);
         loadAbilities();
         //checkAbilities();
     }
@@ -69,6 +70,7 @@ public class Warrior : Character
 
     public override void takeDamage(int dmg) {
         health -= dmg + incomingDamage;
+        hpBar.SetHealth(health);
         wasused = false;
     }
 

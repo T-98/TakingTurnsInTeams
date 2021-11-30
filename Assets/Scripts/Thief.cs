@@ -15,6 +15,7 @@ public class Thief : Character
     }
     private void Start()
     {
+        hpBar.SetMaxHealth(maxHealth);
         loadAbilities();
         //checkAbilities();
     }

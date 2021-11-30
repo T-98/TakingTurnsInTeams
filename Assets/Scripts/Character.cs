@@ -7,6 +7,7 @@ public class Character : MonoBehaviour
     public string charaName;
     public bool avaTurn;
     public GameObject canvas;
+    public HealthBar hpBar;
     public Dictionary<int, string> abilities;
     public int health, maxHealth, damage = 0, incomingDamage = 0, speed = 0, decSpeed = 0;
 
@@ -18,11 +19,14 @@ public class Character : MonoBehaviour
     public virtual void takeDamage(int dmg) {
         //currHP -= dmg;
         //check for death here
+        health -= dmg;
+        hpBar.SetHealth(health);
         Debug.Log(charaName + " took " + dmg + " dmg");
     }
 
     public void heal(int val) {
         health = ((health + val) > maxHealth) ? maxHealth : health + val;
+        hpBar.SetHealth(health);
     }
 
     public void death() {
