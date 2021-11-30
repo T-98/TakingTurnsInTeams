@@ -144,6 +144,7 @@ public class CombatSystem : MonoBehaviour
         warrior.refreshTurn();
         thief.refreshTurn();
         mage.refreshTurn();
+        enemy.resetImmune();
         sortedMoves.Clear();
         //check for character deaths
         state = State.PLAYERTURN;

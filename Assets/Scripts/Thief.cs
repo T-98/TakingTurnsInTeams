@@ -18,9 +18,11 @@ public class Thief : Character
     public override void takeDamage(int dmg) {
         health -= dmg;
         hpBar.SetHealth(health);
+        Debug.Log("Thief took " + dmg + " dmg");
         if(health < 0 && feint) {
             health = maxHealth;
             feint = false;
+            Debug.Log("Thief survived from the effects of final feint");
         }
         hpBar.SetHealth(health);
     }
@@ -97,6 +99,7 @@ public class Thief : Character
 
     public override void execute(int val)
     {
+        Debug.Log("Thief used " + abilityNames[val]);
         switch (val)
         {
             case 1: //roll the dice

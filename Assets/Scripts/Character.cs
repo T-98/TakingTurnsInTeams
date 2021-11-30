@@ -18,8 +18,6 @@ public class Character : MonoBehaviour
     }
 
     public virtual void takeDamage(int dmg) {
-        //currHP -= dmg;
-        //check for death here
         health -= dmg;
         hpBar.SetHealth(health);
         Debug.Log(charaName + " took " + dmg + " dmg");
@@ -36,9 +34,11 @@ public class Character : MonoBehaviour
     }
 
     public virtual void refreshTurn() {
+        if(isAlive()) {
+            avaTurn = true;
+        }
         damage = 0;
         speed = 0;
-        avaTurn = true;
     }
 
     public void usedMove() {

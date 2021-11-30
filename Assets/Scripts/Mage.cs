@@ -78,6 +78,7 @@ public class Mage : Character
     }
     public override void execute(int val)
     {
+        Debug.Log("Mage used " + abilityNames[val]);
         switch(val)
         {
             case 1:

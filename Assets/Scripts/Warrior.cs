@@ -73,6 +73,7 @@ public class Warrior : Character
         health -= dmg + incomingDamage;
         hpBar.SetHealth(health);
         wasused = false;
+        Debug.Log("Warrior took " + dmg + " dmg");
     }
 
     //Blocks 30 damage for next attack, Speed: 2
@@ -134,6 +135,7 @@ public class Warrior : Character
                 attack();
                 break;
         }
+        Debug.Log("Warrior used " + abilityNames[val]);
     }
 
     public override void refreshTurn() {

@@ -21,7 +21,7 @@ public class Enemy : Character
     public override void attack() {
         //later this will queue up moves
         Debug.Log(this.name + " attacked " + target.name);
-        target.takeDamage(10);
+        target.takeDamage(damage);
     }
 
     public void EnemyTakeDamage(int dmg, Character chara) {
@@ -29,7 +29,9 @@ public class Enemy : Character
         hpBar.SetHealth(health);
         if(reflection) {
             chara.takeDamage((immune) ? 0 : Mathf.FloorToInt(dmg / 2));
+            reflection = false;
         }
+        immune = false;
     }
 
     public void setSpeed(int id) {
@@ -97,5 +99,9 @@ public class Enemy : Character
         warrior.speedChange(speed);
         mage.speedChange(speed);
         thief.speedChange(speed);
+    }
+
+    public void resetImmune() {
+        immune = false;
     }
 }
