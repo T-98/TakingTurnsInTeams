@@ -6,7 +6,7 @@ public class Mage : Character
 {
     public Character enemy, warrior, thief;
     private string[] abilityNames = { "Searing Flames", "Electrical Surge", "Infusion", "Haste", "Health Potion", "Sacred Ash"};
-    private double health = 100, damage = 0, incomingDamage = 0, speed = 0, decSpeed = 0;
+    private int health = 100, damage = 0, incomingDamage = 0, speed = 0, decSpeed = 0;
     public override void attack() {
         enemy.takeDamage(damage);
         Debug.Log(this.name + " attacked " + enemy.name);
@@ -48,7 +48,7 @@ public class Mage : Character
         speed = 6;
     }
 
-    //A devastating lightning attack that does 20 damage, the Boss’ attack next turn is increased by 3, Speed:7
+    //A devastating lightning attack that does 20 damage, the Bossï¿½ attack next turn is increased by 3, Speed:7
     public void electricalsurge()
     {
         damage = 20;
@@ -63,7 +63,7 @@ public class Mage : Character
         //group heal
     }
 
-    //A buff that decreases all party members’ speed by 2 in the next turn, Speed : 8
+    //A buff that decreases all party membersï¿½ speed by 2 in the next turn, Speed : 8
     public void haste()
     {
         speed = 8;
@@ -117,5 +117,9 @@ public class Mage : Character
                 attack();
                 break;
         }
+    }
+
+    public override int getSpeed() {
+        return speed + decSpeed;
     }
 }

@@ -56,4 +56,6 @@ public class Character : MonoBehaviour
     }
 
     public virtual void execute(int val) { }
+
+    public virtual int getSpeed() { return 999999; }
 }

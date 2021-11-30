@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public enum State {
@@ -79,6 +80,7 @@ public class CombatSystem : MonoBehaviour
             selected.usedMove();
             moves.Add(selected, atkID);
             Debug.Log(selected.name + " selected attack " + atkID + " => "+ selected.getAbilities()[atkID]);
+            selected.disableCanvas();
         }
     }
 
@@ -101,7 +103,23 @@ public class CombatSystem : MonoBehaviour
         {
 
         }*/
-        foreach (KeyValuePair<Character, int> move in moves) {
+        Dictionary<Character, int> sortedMoves = new Dictionary<Character, int>();
+        while(moves.Count > 0) {
+            Character i = moves.First().Key;
+            int id = moves.First().Value;
+            int speed = i.getSpeed();
+            foreach(KeyValuePair<Character, int> move in moves) {
+                if(move.Key.getSpeed() < speed) {
+                    i = move.Key;
+                    id = move.Value;
+                    speed = move.Key.getSpeed();
+                }
+            }
+            sortedMoves.Add(i, id);
+            moves.Remove(i);
+        }
+
+        foreach (KeyValuePair<Character, int> move in sortedMoves) {
             Debug.Log(move.Key);
             Debug.Log(move.Value);
             move.Key.execute(move.Value);
@@ -112,7 +130,7 @@ public class CombatSystem : MonoBehaviour
         warrior.refreshTurn();
         thief.refreshTurn();
         mage.refreshTurn();
-        moves.Clear();
+        sortedMoves.Clear();
         //check for character deaths
         state = State.PLAYERTURN;
     }

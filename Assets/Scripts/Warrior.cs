@@ -6,7 +6,7 @@ public class Warrior : Character
 {
     public Character enemy;
     private string[] abilityNames = {"Raging Blow", "Power Slash", "Taunt", "Crescent Shield", "Health Potion", "Berzerker Potion", "Sacrificial Pact"};
-    private double health = 150, damage = 0, incomingDamage = 0, speed = 0, decSpeed = 0;
+    private int health = 150, damage = 0, incomingDamage = 0, speed = 0, decSpeed = 0;
 
     public override void attack() {
         Debug.Log(this.name + " attacked " + enemy.name);
@@ -78,7 +78,7 @@ public class Warrior : Character
         speed = 1;
     }
 
-    public void damagetaken(double damage, double speed)
+    public void damagetaken(int damage, int speed)
     {
         incomingDamage += damage;
         health -= incomingDamage;
@@ -158,5 +158,9 @@ public class Warrior : Character
                 attack();
                 break;
         }
+    }
+
+    public override int getSpeed() {
+        return speed + decSpeed;
     }
 }

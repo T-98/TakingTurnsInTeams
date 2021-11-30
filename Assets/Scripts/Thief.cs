@@ -6,7 +6,7 @@ public class Thief : Character
 {
     public Character enemy;
     private string[] abilityNames = { "Quick Stab", "Roll the Dice", "Rage Swipes", "Coin Toss", "Health Potion", "Final Feint", "Lucky Charm" };
-    private double health = 60, damage = 0, incomingDamage = 0, speed = 0, decSpeed = 0;
+    private int health = 60, damage = 0, incomingDamage = 0, speed = 0, decSpeed = 0;
 
     public override void attack() {
         Debug.Log(this.name + " attacked " + enemy.name);
@@ -150,5 +150,9 @@ public class Thief : Character
                 attack();
                 break;
         }
+    }
+
+    public override int getSpeed() {
+        return speed + decSpeed;
     }
 }
