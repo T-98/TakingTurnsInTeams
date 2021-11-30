@@ -16,6 +16,7 @@ public class Thief : Character
     }
 
     public override void takeDamage(int dmg) {
+        if(!isAlive()) return;
         health -= dmg;
         hpBar.SetHealth(health);
         Debug.Log("Thief took " + dmg + " dmg");
@@ -25,6 +26,11 @@ public class Thief : Character
             Debug.Log("Thief survived from the effects of final feint");
         }
         hpBar.SetHealth(health);
+
+        if(!isAlive()) {
+            Debug.Log("Thief died");
+            death();
+        }
     }
 
     private void Start()

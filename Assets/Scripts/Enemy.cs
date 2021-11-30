@@ -25,6 +25,7 @@ public class Enemy : Character
     }
 
     public void EnemyTakeDamage(int dmg, Character chara) {
+        if(!isAlive()) return;
         health -= (immune) ? 0 : dmg;
         hpBar.SetHealth(health);
         if(reflection) {
@@ -32,6 +33,11 @@ public class Enemy : Character
             reflection = false;
         }
         immune = false;
+
+        if(!isAlive()) {
+            Debug.Log(charaName + " died");
+            death();
+        }
     }
 
     public void setSpeed(int id) {

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum State {
     START, 
@@ -89,10 +90,14 @@ public class CombatSystem : MonoBehaviour
         //change this to pick random target
 
         List<Character> alive = new List<Character>();
-        if(warrior.isAlive()) alive.Add(warrior);
+        if(warrior.isAlive()) {
+            alive.Add(warrior);
+        } else {
+            Debug.Log("warrior is dead");
+        }
         if(mage.isAlive()) alive.Add(mage);
         if(thief.isAlive()) alive.Add(thief);
-        enemy.pickTarget(alive[Random.Range(0,3)]);
+        enemy.pickTarget(alive[Random.Range(0,alive.Count)]);
 
         int randomMove = Random.Range(0, 5);
 
@@ -147,6 +152,27 @@ public class CombatSystem : MonoBehaviour
         enemy.resetImmune();
         sortedMoves.Clear();
         //check for character deaths
-        state = State.PLAYERTURN;
+
+        if(!thief.isAlive() && !mage.isAlive() && !warrior.isAlive()) {
+            state = State.LOSE;
+            StartCoroutine(lose());
+        } else if(!enemy.isAlive()) {
+            state = State.WIN;
+            StartCoroutine(win());
+        } else {
+            state = State.PLAYERTURN;
+        }
+    }
+
+    public IEnumerator win() {
+        Debug.Log("You have won!");
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene (sceneName:"Menu");
+    }
+
+    public IEnumerator lose() {
+        Debug.Log("You have lost!");
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene (sceneName:"Menu");
     }
 }

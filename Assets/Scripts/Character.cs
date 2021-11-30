@@ -18,12 +18,18 @@ public class Character : MonoBehaviour
     }
 
     public virtual void takeDamage(int dmg) {
+        if(!isAlive()) return;
         health -= dmg;
         hpBar.SetHealth(health);
         Debug.Log(charaName + " took " + dmg + " dmg");
+        if(!isAlive()) {
+            Debug.Log(charaName + " died");
+            death();
+        }
     }
 
     public void heal(int val) {
+        if(!isAlive()) return;
         health = ((health + val) > maxHealth) ? maxHealth : health + val;
         hpBar.SetHealth(health);
     }
@@ -31,6 +37,8 @@ public class Character : MonoBehaviour
     public void death() {
         //play death animation here
         Debug.Log(this.charaName + " has died!");
+        Destroy(gameObject);
+        hpBar.death();
     }
 
     public virtual void refreshTurn() {
@@ -54,7 +62,9 @@ public class Character : MonoBehaviour
     }
 
     public void Reset() {
-        avaTurn = true;
+        if(isAlive()) {
+            avaTurn = true;
+        }
     }
 
     public bool hasMove() {

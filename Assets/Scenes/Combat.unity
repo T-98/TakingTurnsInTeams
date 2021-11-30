@@ -3535,6 +3535,7 @@ GameObject:
   - component: {fileID: 674034263}
   - component: {fileID: 674034262}
   - component: {fileID: 674034264}
+  - component: {fileID: 674034265}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: enemy
@@ -3633,8 +3634,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: -0.0070144655, y: -0.006642151}
+  m_Size: {x: 0.8456799, y: 0.8456799}
   m_Direction: 0
 --- !u!114 &674034264
 MonoBehaviour:
@@ -3666,6 +3667,25 @@ MonoBehaviour:
   target: {fileID: 0}
   immune: 0
   reflection: 0
+--- !u!95 &674034265
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674034259}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cdca9c925f690754cb904aae6f8da098, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &674769089
 GameObject:
   m_ObjectHideFlags: 0

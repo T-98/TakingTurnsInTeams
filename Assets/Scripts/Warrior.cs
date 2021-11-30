@@ -70,10 +70,15 @@ public class Warrior : Character
     }
 
     public override void takeDamage(int dmg) {
+        if(!isAlive()) return;
         health -= dmg + incomingDamage;
         hpBar.SetHealth(health);
         wasused = false;
         Debug.Log("Warrior took " + dmg + " dmg");
+        if(!isAlive()) {
+            Debug.Log("Warrior died");
+            death();
+        }
     }
 
     //Blocks 30 damage for next attack, Speed: 2
@@ -139,6 +144,9 @@ public class Warrior : Character
     }
 
     public override void refreshTurn() {
+        if(!isAlive()) {
+            return;
+        }
         damage = 0;
         speed = 0;
         incomingDamage = ((berserk) ? 10 : 0) + ((wasused) ? -30 : 0);
