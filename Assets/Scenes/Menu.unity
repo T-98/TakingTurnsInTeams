@@ -436,18 +436,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 134
+    m_FontSize: 217
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 196
+    m_MaxSize: 219
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Taking turns in teams
+    m_LineSpacing: 3.15
+  m_Text: WanQuest
 --- !u!222 &427036475
 CanvasRenderer:
   m_ObjectHideFlags: 0
