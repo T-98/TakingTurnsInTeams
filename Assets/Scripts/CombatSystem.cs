@@ -84,6 +84,7 @@ public class CombatSystem : MonoBehaviour
         }
     }
 
+    //speedsystem dict => //make a new dictionary with atk names "selected.getAbilities()[atkID]" and respective speeds
     public void EnemyPhase() {
         //change this to pick random target
         enemy.pickTarget(warrior);
@@ -99,6 +100,11 @@ public class CombatSystem : MonoBehaviour
         //speed sorting
         //reorder the map
         //attk after sorting
+
+        //iterate and sort speed system dict
+        //Algorithm
+        //var sortedDict = from entry in myDict orderby entry.Value ascending select entry;
+
         /*foreach(KeyValuePair<Character, int> move in moves.OrderBy(key=>key.speed))
         {
 
