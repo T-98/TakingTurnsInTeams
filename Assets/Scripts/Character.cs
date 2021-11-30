@@ -5,23 +5,22 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     public string charaName;
-    
-    public int currHP;
-    public int maxHP;
-
     public bool avaTurn;
-
     public GameObject canvas;
+    public Dictionary<int, string> abilities;
 
-    public void takeDamage(int dmg) {
-        currHP -= dmg;
+    public Dictionary<int, string> getAbilities()
+    {
+        return abilities;
+    }
+
+    public void takeDamage(double dmg) {
+        //currHP -= dmg;
         //check for death here
         Debug.Log(charaName + " took " + dmg + " dmg");
     }
 
-    public void heal(int val) {
-        currHP = (currHP + val > maxHP) ? maxHP : currHP + val;
-    }
+    public virtual void heal(int val) { }
 
     public void death() {
         //play death animation here
@@ -36,10 +35,6 @@ public class Character : MonoBehaviour
         avaTurn = false;
     }
 
-   /* public void setCanvas(GameObject canva) {
-        canvas = canva;
-    }
-   */
     public void enableCanvas() {
         canvas.SetActive(true);
     }
@@ -49,7 +44,6 @@ public class Character : MonoBehaviour
     }
 
     public void Reset() {
-        currHP = maxHP;
         avaTurn = true;
     }
 
@@ -60,4 +54,6 @@ public class Character : MonoBehaviour
     public virtual void attack() {
         Debug.Log("you shouldn't be here");
     }
+
+    public virtual void execute(int val) { }
 }

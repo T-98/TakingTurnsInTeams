@@ -74,10 +74,11 @@ public class CombatSystem : MonoBehaviour
     public void OnAttackClick(int atkID) {
         if(selected.hasMove()) {
             //Use atkID to know which button was pressed
+            //atkID is the key to the dictionary in respective character classes
             //Use it when different moves are being implemented
             selected.usedMove();
             moves.Add(selected, atkID);
-            Debug.Log(selected.name + " selected attack " + atkID);
+            Debug.Log(selected.name + " selected attack " + atkID + " => "+ selected.getAbilities()[atkID]);
         }
     }
 
@@ -93,10 +94,17 @@ public class CombatSystem : MonoBehaviour
 
     public void CombatPhase() {
         // This is temporary thing that just plays all the moves out
+        //speed sorting
+        //reorder the map
+        //attk after sorting
+        /*foreach(KeyValuePair<Character, int> move in moves.OrderBy(key=>key.speed))
+        {
+
+        }*/
         foreach (KeyValuePair<Character, int> move in moves) {
             Debug.Log(move.Key);
             Debug.Log(move.Value);
-            move.Key.attack();
+            move.Key.execute(move.Value);
         }
 
         //yield return new WaitForSeconds(2f);
@@ -105,6 +113,7 @@ public class CombatSystem : MonoBehaviour
         thief.refreshTurn();
         mage.refreshTurn();
         moves.Clear();
+        //check for character deaths
         state = State.PLAYERTURN;
     }
 }
