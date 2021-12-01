@@ -4059,6 +4059,7 @@ MonoBehaviour:
   hpPot: 2
   item1: 1
   item2: 1
+  anim: {fileID: 0}
   enemy: {fileID: 674034264}
   warrior: {fileID: 1243564689}
   mage: {fileID: 1722571298}
@@ -4253,6 +4254,7 @@ MonoBehaviour:
   hpPot: 2
   item1: 0
   item2: 0
+  anim: {fileID: 0}
   warrior: {fileID: 1243564689}
   mage: {fileID: 1722571298}
   thief: {fileID: 653315897}
@@ -8264,6 +8266,7 @@ MonoBehaviour:
   hpPot: 2
   item1: 2
   item2: 2
+  anim: {fileID: 0}
   enemy: {fileID: 674034264}
   mage: {fileID: 1722571298}
   thief: {fileID: 653315897}
@@ -10504,6 +10507,8 @@ MonoBehaviour:
   hpPot: 2
   item1: 1
   item2: 0
+  anim: {fileID: 0}
+  lightning: {fileID: 3742641080772188827, guid: c491fe8b8b3dbb44ea6b709d9bc9b632, type: 3}
   enemy: {fileID: 674034264}
   warrior: {fileID: 1243564689}
   thief: {fileID: 653315897}

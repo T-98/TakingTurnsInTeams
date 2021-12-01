@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Mage : Character
 {
+    public GameObject lightning;
     public Enemy enemy;
     public Character warrior, thief;
     private string[] abilityNames = { "Searing Flames", "Electrical Surge", "Infusion", "Haste", "Health Potion", "Sacred Ash"};
@@ -78,6 +79,21 @@ public class Mage : Character
     {
         speed = 1;
     }
+
+    public void Lightning()
+    {
+       GameObject l = Instantiate(lightning, enemy.transform.position, Quaternion.identity);
+        l.transform.localScale *= 8;
+    }
+    //group heal func
+    //triggered from within the meage_heal animation
+    public void groupHeal()
+    {
+        //code
+        warrior.heal(50);
+        thief.heal(50);
+        //TODO
+    }
     public override void execute(int val)
     {
         Debug.Log("Mage used " + abilityNames[val]);
@@ -85,7 +101,7 @@ public class Mage : Character
         {
             case 1:
                 enemy.speedChange(3);
-                attack();
+                anim.Play("mage_lighting", 0, 0);
                 break;
             case 2:
                 heal(30);
@@ -103,9 +119,8 @@ public class Mage : Character
                 if (health > 150) health = 150;
                 break;
             case 5:
-                heal(50);
-                warrior.heal(50);
-                thief.heal(50);
+                //heal(50);
+                anim.Play("mage_heal", 0, 0);
                 break;
             default:
                 attack();

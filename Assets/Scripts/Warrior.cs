@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Warrior : Character
-{
+{ 
     public Enemy enemy;
     public Character mage, thief;
     private string[] abilityNames = {"Raging Blow", "Power Slash", "Taunt", "Crescent Shield", "Health Potion", "Berzerker Potion", "Sacrificial Pact"};
@@ -116,10 +116,20 @@ public class Warrior : Character
     {
         switch (val)
         {
+            case 0:
+                //regAtk
+                anim.Play("warrior_regAtk", 0, 0);
+                //attack();
+                break;
+            case 1:
+                anim.Play("warrior_heavyAtk", 0, 0);
+                break;
             case 2:
+                anim.Play("warrior_taunt", 0, 0);
                 enemy.pickTarget(this);
                 break;
             case 3:
+                anim.Play("warrior_shield", 0, 0);
                 incomingDamage -= 30;
                 break;
             case 4:
@@ -132,12 +142,11 @@ public class Warrior : Character
                 break;
             case 6:
                 health = 0;
-                death();
+                anim.Play("warrior_death", 0, 0);
                 mage.heal(99999);
                 thief.heal(99999);
                 break;
             default:
-                attack();
                 break;
         }
         Debug.Log("Warrior used " + abilityNames[val]);
