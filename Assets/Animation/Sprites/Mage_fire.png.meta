@@ -101,10 +101,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,10 +113,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -154,10 +154,10 @@ TextureImporter:
       name: Mage_fire_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 22
-        height: 28
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,10 +175,10 @@ TextureImporter:
       name: Mage_fire_2
       rect:
         serializedVersion: 2
-        x: 33
+        x: 64
         y: 0
-        width: 27
-        height: 28
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,10 +196,10 @@ TextureImporter:
       name: Mage_fire_4
       rect:
         serializedVersion: 2
-        x: 64
+        x: 128
         y: 0
         width: 32
-        height: 28
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,10 +217,10 @@ TextureImporter:
       name: Mage_fire_6
       rect:
         serializedVersion: 2
-        x: 96
+        x: 192
         y: 0
         width: 32
-        height: 28
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,13 +235,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mage_fire_8
+      name: Mage_fire_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 32
         y: 0
-        width: 33
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,20 +249,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70b92c2e8f05b90f0800000000000000
-      internalID: -1109203853330179321
+      spriteID: 47128ad637be59a50800000000000000
+      internalID: 6527382115936903540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mage_fire_10
+      name: Mage_fire_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a6fbe0ebf5272f0800000000000000
+      internalID: -976612899290125779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage_fire_5
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 32
-        height: 28
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,20 +291,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 861c38cd967ccd820800000000000000
-      internalID: 2944447513878577512
+      spriteID: 27a67113021a8c980800000000000000
+      internalID: -8518381535536649614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mage_fire_12
+      name: Mage_fire_7
       rect:
         serializedVersion: 2
-        x: 192
+        x: 224
         y: 0
-        width: 22
-        height: 28
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,29 +312,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 446dbb94af8b60b40800000000000000
-      internalID: 5406211787823240772
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mage_fire_13
-      rect:
-        serializedVersion: 2
-        x: 219
-        y: 0
-        width: 35
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 603b783f43490bdc0800000000000000
-      internalID: -3625234744888282362
+      spriteID: 64b20d4f32f7b5280800000000000000
+      internalID: -9053502833490384058
       vertices: []
       indices: 
       edges: []

@@ -140,17 +140,21 @@ public class CombatSystem : MonoBehaviour
         }
 
         foreach (KeyValuePair<Character, int> move in sortedMoves) {
-            Debug.Log(move.Key);
             if(move.Key.isAlive())move.Key.execute(move.Value);
         }
 
         //yield return new WaitForSeconds(2f);
 
+        sortedMoves.Clear();
+
+        completeTurn();
+    }
+
+    public void completeTurn() {
         warrior.refreshTurn();
         thief.refreshTurn();
         mage.refreshTurn();
         enemy.resetImmune();
-        sortedMoves.Clear();
         //check for character deaths
 
         if(!thief.isAlive() && !mage.isAlive() && !warrior.isAlive()) {

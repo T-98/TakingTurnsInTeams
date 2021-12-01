@@ -7,11 +7,11 @@ public class Warrior : Character
     public Enemy enemy;
     public Character mage, thief;
     private string[] abilityNames = {"Raging Blow", "Power Slash", "Taunt", "Crescent Shield", "Health Potion", "Berzerker Potion", "Sacrificial Pact"};
-    public bool berserk = false;
+    public int berserk = 0;
 
     public override void attack() {
         Debug.Log(this.name + " attacked " + enemy.name);
-        enemy.EnemyTakeDamage(damage + ((berserk) ? 20 : 0), this);
+        enemy.EnemyTakeDamage((damage + 20*berserk), this);
     }
 
     private void Start()
@@ -58,8 +58,6 @@ public class Warrior : Character
     public void bersekerpotion()
     {
         speed = 1;
-        incomingDamage += 10;
-        berserk = true;
     }
 
     //Sacrificial Pact x1 - Kill your character in order to regen the rest of your party members to full health
@@ -139,6 +137,8 @@ public class Warrior : Character
                 break;
             case 5:
                 //play berserk animation
+                berserk++;
+                incomingDamage += 10;
                 break;
             case 6:
                 health = 0;
@@ -158,7 +158,7 @@ public class Warrior : Character
         }
         damage = 0;
         speed = 0;
-        incomingDamage = ((berserk) ? 10 : 0) + ((wasused) ? -30 : 0);
+        incomingDamage = 10*berserk + ((wasused) ? -30 : 0);
         wasused = false;
         avaTurn = true;
     }

@@ -4179,7 +4179,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4193,7 +4193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674034259}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 3.83, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 288383886}
@@ -10445,7 +10445,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -10508,10 +10508,7 @@ MonoBehaviour:
   item1: 1
   item2: 0
   anim: {fileID: 0}
-<<<<<<< HEAD
   lightning: {fileID: 3742641080772188827, guid: c491fe8b8b3dbb44ea6b709d9bc9b632, type: 3}
-=======
->>>>>>> 12ae5f180af8606a1a7b1d98c01b08f2192410ad
   enemy: {fileID: 674034264}
   warrior: {fileID: 1243564689}
   thief: {fileID: 653315897}
@@ -12723,7 +12720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2027613989
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,6 +20,18 @@ TextureImporter:
   - first:
       213: 910450290678142573
     second: Knight_death_9
+  - first:
+      213: -3745638490737691650
+    second: Knight_death_0
+  - first:
+      213: 6657448803274741408
+    second: Knight_death_2
+  - first:
+      213: -4239482484763587244
+    second: Knight_death_3
+  - first:
+      213: 9209660545074565327
+    second: Knight_death_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -83,10 +95,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,10 +107,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -136,10 +148,10 @@ TextureImporter:
       name: Knight_death_1
       rect:
         serializedVersion: 2
-        x: 241
+        x: 48
         y: 0
         width: 48
-        height: 46
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,10 +169,10 @@ TextureImporter:
       name: Knight_death_4
       rect:
         serializedVersion: 2
-        x: 196
+        x: 192
         y: 0
-        width: 41
-        height: 38
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,13 +187,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knight_death_6
+      name: Knight_death_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 0
         y: 0
-        width: 23
-        height: 31
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,20 +201,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d3af14e23b62a680800000000000000
-      internalID: -8745309660080266279
+      spriteID: ef3bc8e43a1d40cc0800000000000000
+      internalID: -3745638490737691650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knight_death_7
+      name: Knight_death_2
       rect:
         serializedVersion: 2
-        x: 58
+        x: 96
         y: 0
-        width: 25
-        height: 32
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,20 +222,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c363d603e7ac397e0800000000000000
-      internalID: -1759840386044578244
+      spriteID: 0a65a85f962046c50800000000000000
+      internalID: 6657448803274741408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knight_death_8
+      name: Knight_death_3
       rect:
         serializedVersion: 2
-        x: 104
+        x: 144
         y: 0
-        width: 29
-        height: 34
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,20 +243,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a44b5410595686d0800000000000000
-      internalID: -2988603102239963995
+      spriteID: 45d0d2054255a25c0800000000000000
+      internalID: -4239482484763587244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knight_death_9
+      name: Knight_death_5
       rect:
         serializedVersion: 2
-        x: 151
+        x: 240
         y: 0
-        width: 31
-        height: 35
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,8 +264,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d66958137b192ac00800000000000000
-      internalID: 910450290678142573
+      spriteID: fc0991b88794fcf70800000000000000
+      internalID: 9209660545074565327
       vertices: []
       indices: 
       edges: []

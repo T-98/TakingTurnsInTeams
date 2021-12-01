@@ -29,6 +29,15 @@ TextureImporter:
   - first:
       213: 9020656221921627463
     second: Mage_lighting_11
+  - first:
+      213: -4740419500896166984
+    second: Mage_lighting_4
+  - first:
+      213: 2237861054460017156
+    second: Mage_lighting_6
+  - first:
+      213: 2898617838070715015
+    second: Mage_lighting_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -59,7 +68,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -92,10 +101,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,10 +113,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -145,10 +154,10 @@ TextureImporter:
       name: Mage_lighting_0
       rect:
         serializedVersion: 2
-        x: 6
+        x: 0
         y: 0
-        width: 18
-        height: 28
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,10 +175,10 @@ TextureImporter:
       name: Mage_lighting_1
       rect:
         serializedVersion: 2
-        x: 38
+        x: 32
         y: 0
-        width: 22
-        height: 28
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,10 +196,10 @@ TextureImporter:
       name: Mage_lighting_2
       rect:
         serializedVersion: 2
-        x: 70
+        x: 64
         y: 0
-        width: 25
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,9 +217,9 @@ TextureImporter:
       name: Mage_lighting_3
       rect:
         serializedVersion: 2
-        x: 102
+        x: 96
         y: 0
-        width: 24
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -229,9 +238,9 @@ TextureImporter:
       name: Mage_lighting_5
       rect:
         serializedVersion: 2
-        x: 134
+        x: 160
         y: 0
-        width: 23
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -250,9 +259,9 @@ TextureImporter:
       name: Mage_lighting_8
       rect:
         serializedVersion: 2
-        x: 166
+        x: 256
         y: 0
-        width: 27
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -268,13 +277,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mage_lighting_9
+      name: Mage_lighting_4
       rect:
         serializedVersion: 2
-        x: 198
+        x: 128
         y: 0
-        width: 27
-        height: 30
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,20 +291,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08ae271cb4be27280800000000000000
-      internalID: -9046909990833296768
+      spriteID: 8bbdfba6495a63eb0800000000000000
+      internalID: -4740419500896166984
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mage_lighting_10
+      name: Mage_lighting_6
       rect:
         serializedVersion: 2
-        x: 230
+        x: 192
         y: 0
-        width: 25
-        height: 28
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,20 +312,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6f725f36d1050a40800000000000000
-      internalID: 5333671353387220842
+      spriteID: 40a35c7b5ca7e0f10800000000000000
+      internalID: 2237861054460017156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mage_lighting_11
+      name: Mage_lighting_7
       rect:
         serializedVersion: 2
-        x: 262
+        x: 224
         y: 0
-        width: 23
-        height: 28
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,8 +333,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74d4e845a0fcf2d70800000000000000
-      internalID: 9020656221921627463
+      spriteID: 782d0d1f095f93820800000000000000
+      internalID: 2898617838070715015
       vertices: []
       indices: 
       edges: []

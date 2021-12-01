@@ -87,11 +87,12 @@ public class Mage : Character
     }
     //group heal func
     //triggered from within the meage_heal animation
-    public void groupHeal()
+    public void groupHeal(int val)
     {
         //code
-        warrior.heal(50);
-        thief.heal(50);
+        heal(val);
+        warrior.heal(val);
+        thief.heal(val);
         //TODO
     }
     public override void execute(int val)
@@ -99,17 +100,19 @@ public class Mage : Character
         Debug.Log("Mage used " + abilityNames[val]);
         switch(val)
         {
+            case 0:
+                anim.Play("mage_fire", 0, 0);
+                break;
             case 1:
                 enemy.speedChange(3);
                 anim.Play("mage_lighting", 0, 0);
                 break;
             case 2:
-                heal(30);
-                warrior.heal(30);
-                thief.heal(30);
-                attack();
+                anim.Play("mage_heal", 0, 0);
+                groupHeal(30);
                 break;
             case 3:
+                anim.Play("mage_heal", 0, 0);
                 speedChange(-2);
                 warrior.speedChange(-2);
                 thief.speedChange(-2);
@@ -121,9 +124,9 @@ public class Mage : Character
             case 5:
                 //heal(50);
                 anim.Play("mage_heal", 0, 0);
+                groupHeal(50);
                 break;
             default:
-                attack();
                 break;
         }
     }

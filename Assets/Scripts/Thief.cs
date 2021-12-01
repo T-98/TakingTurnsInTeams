@@ -108,8 +108,12 @@ public class Thief : Character
         Debug.Log("Thief used " + abilityNames[val]);
         switch (val)
         {
+            case 0:
+                anim.Play("thief_quick", 0, 0);
+                break;
             case 1: //roll the dice
                 int randomNumber = UnityEngine.Random.Range(1, 7);
+                anim.Play("thief_dice", 0, 0);
                 switch (randomNumber)
                 {
                     //this is where these go
@@ -142,21 +146,25 @@ public class Thief : Character
                         break;
                 }
                 break;
-
             case 2: //rage swipes
                 int randomNum = (lucky) ? 4 : Random.Range(1, 5);
                 lucky = false;
                 //randomnumber will decide how many times to trigger the anim
                 damage = randomNum * 25;
-                attack();
-                damage = 0;
+                anim.Play("thief_rage", 0, 0);
                 break;
             case 3://coin toss
                 int coin = (lucky) ? 1 : Random.Range(0, 2);
                 lucky = false;
-                if (coin == 0) damage = 70; // heads
-                else damage = 0; //tails
-                attack();
+                if (coin == 0) {
+                    damage = 70;
+                    anim.Play("thief_heads", 0, 0);
+                }
+                else {
+                    damage = 0;
+                    anim.Play("thief_tails", 0, 0);
+                }
+                
                 //trigger animation
                 break;
             case 4:
@@ -170,7 +178,6 @@ public class Thief : Character
                 lucky = true;
                 break;
             default:
-                attack();
                 break;
         }
     }

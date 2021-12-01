@@ -116,10 +116,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -128,10 +128,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -169,12 +169,12 @@ TextureImporter:
       name: Knight_shield_0
       rect:
         serializedVersion: 2
-        x: 50
+        x: 0
         y: 0
-        width: 44
-        height: 47
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -190,12 +190,12 @@ TextureImporter:
       name: Knight_shield_2
       rect:
         serializedVersion: 2
-        x: 98
-        y: 1
-        width: 45
-        height: 46
+        x: 96
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -208,106 +208,106 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knight_shield_8
+      name: Knight_shield_1
       rect:
         serializedVersion: 2
-        x: 236
+        x: 48
         y: 0
-        width: 53
+        width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d34d9433fb3d7ec0800000000000000
-      internalID: -3567629414061751335
+      spriteID: cbd691f95dca0a2d0800000000000000
+      internalID: -3269423295973724740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knight_shield_9
+      name: Knight_shield_3
       rect:
         serializedVersion: 2
-        x: 11
+        x: 144
         y: 0
-        width: 25
-        height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3a890ec46bf9a8b0800000000000000
-      internalID: -5140301089294677445
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Knight_shield_12
-      rect:
-        serializedVersion: 2
-        x: 145
-        y: 0
-        width: 50
+        width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 234d4e1d62b71e580800000000000000
-      internalID: -8799616790244830158
+      spriteID: f7d5cd5c779df75a0800000000000000
+      internalID: -6521254626965299841
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knight_shield_13
+      name: Knight_shield_4
       rect:
         serializedVersion: 2
-        x: 196
+        x: 192
         y: 0
-        width: 38
+        width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 799af16c247889c20800000000000000
-      internalID: 3213467054990403991
+      spriteID: 8d4d1b6848afc3280800000000000000
+      internalID: -9062092903073852200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knight_shield_14
+      name: Knight_shield_5
       rect:
         serializedVersion: 2
-        x: 294
+        x: 240
         y: 0
-        width: 28
-        height: 31
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a65118ba42321a80800000000000000
-      internalID: -8497674250397591901
+      spriteID: 53dda72ae7c2e0540800000000000000
+      internalID: 4975963560694439221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Knight_shield_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ac670759cc127d70800000000000000
+      internalID: 9039319053160115361
       vertices: []
       indices: 
       edges: []

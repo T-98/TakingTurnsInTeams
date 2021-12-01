@@ -167,7 +167,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -200,10 +200,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -212,10 +212,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -253,10 +253,10 @@ TextureImporter:
       name: Lightning_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 111
-        width: 7
-        height: 17
+        x: 0
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,10 +274,10 @@ TextureImporter:
       name: Lightning_2
       rect:
         serializedVersion: 2
-        x: 76
-        y: 95
-        width: 8
-        height: 33
+        x: 128
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,10 +295,10 @@ TextureImporter:
       name: Lightning_3
       rect:
         serializedVersion: 2
-        x: 139
-        y: 78
-        width: 8
-        height: 50
+        x: 192
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,10 +316,10 @@ TextureImporter:
       name: Lightning_4
       rect:
         serializedVersion: 2
-        x: 172
-        y: 111
-        width: 7
-        height: 17
+        x: 256
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +337,10 @@ TextureImporter:
       name: Lightning_5
       rect:
         serializedVersion: 2
-        x: 204
-        y: 63
-        width: 8
-        height: 65
+        x: 320
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,10 +358,10 @@ TextureImporter:
       name: Lightning_6
       rect:
         serializedVersion: 2
-        x: 236
-        y: 95
-        width: 7
-        height: 33
+        x: 384
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,10 +379,10 @@ TextureImporter:
       name: Lightning_7
       rect:
         serializedVersion: 2
-        x: 267
-        y: 47
-        width: 8
-        height: 81
+        x: 448
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -400,10 +400,10 @@ TextureImporter:
       name: Lightning_8
       rect:
         serializedVersion: 2
-        x: 285
-        y: 111
-        width: 8
-        height: 17
+        x: 512
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -421,10 +421,10 @@ TextureImporter:
       name: Lightning_9
       rect:
         serializedVersion: 2
-        x: 300
-        y: 78
-        width: 7
-        height: 50
+        x: 576
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -442,10 +442,10 @@ TextureImporter:
       name: Lightning_10
       rect:
         serializedVersion: 2
-        x: 332
-        y: 31
-        width: 8
-        height: 97
+        x: 640
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -463,10 +463,10 @@ TextureImporter:
       name: Lightning_11
       rect:
         serializedVersion: 2
-        x: 348
-        y: 95
-        width: 8
-        height: 33
+        x: 704
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -484,10 +484,10 @@ TextureImporter:
       name: Lightning_12
       rect:
         serializedVersion: 2
-        x: 364
-        y: 63
-        width: 7
-        height: 65
+        x: 768
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -505,10 +505,10 @@ TextureImporter:
       name: Lightning_13
       rect:
         serializedVersion: 2
-        x: 395
-        y: 15
-        width: 8
-        height: 113
+        x: 832
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -526,10 +526,10 @@ TextureImporter:
       name: Lightning_14
       rect:
         serializedVersion: 2
-        x: 413
-        y: 78
-        width: 8
-        height: 50
+        x: 896
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -547,10 +547,10 @@ TextureImporter:
       name: Lightning_15
       rect:
         serializedVersion: 2
-        x: 428
-        y: 47
-        width: 7
-        height: 81
+        x: 960
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -568,10 +568,10 @@ TextureImporter:
       name: Lightning_17
       rect:
         serializedVersion: 2
-        x: 474
-        y: 3
-        width: 28
-        height: 124
+        x: 1088
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -589,9 +589,9 @@ TextureImporter:
       name: Lightning_21
       rect:
         serializedVersion: 2
-        x: 587
+        x: 1344
         y: 0
-        width: 39
+        width: 64
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -610,9 +610,9 @@ TextureImporter:
       name: Lightning_23
       rect:
         serializedVersion: 2
-        x: 651
+        x: 1472
         y: 0
-        width: 39
+        width: 64
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -631,9 +631,9 @@ TextureImporter:
       name: Lightning_25
       rect:
         serializedVersion: 2
-        x: 716
+        x: 1600
         y: 0
-        width: 40
+        width: 64
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -652,9 +652,9 @@ TextureImporter:
       name: Lightning_26
       rect:
         serializedVersion: 2
-        x: 782
+        x: 1664
         y: 0
-        width: 36
+        width: 64
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -673,9 +673,9 @@ TextureImporter:
       name: Lightning_27
       rect:
         serializedVersion: 2
-        x: 845
+        x: 1728
         y: 0
-        width: 43
+        width: 64
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -691,159 +691,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lightning_36
-      rect:
-        serializedVersion: 2
-        x: 909
-        y: 0
-        width: 38
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b2424f528327c740800000000000000
-      internalID: 5172141739909202609
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lightning_38
-      rect:
-        serializedVersion: 2
-        x: 988
-        y: 0
-        width: 22
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d9fe2da382b948e0800000000000000
-      internalID: -1708638304994395689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lightning_39
-      rect:
-        serializedVersion: 2
-        x: 1053
-        y: 0
-        width: 21
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54cc3be1cb11a5660800000000000000
-      internalID: 7375226839439232069
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lightning_40
-      rect:
-        serializedVersion: 2
-        x: 1195
-        y: 37
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9cf57b04c354305d0800000000000000
-      internalID: -3097555993614655543
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lightning_65
-      rect:
-        serializedVersion: 2
-        x: 1117
-        y: 0
-        width: 7
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e05843d4e2a037390800000000000000
-      internalID: -7821896933832358642
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lightning_66
-      rect:
-        serializedVersion: 2
-        x: 1171
-        y: 0
-        width: 29
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c689ad091a04af900800000000000000
-      internalID: 718958153183172716
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lightning_89
-      rect:
-        serializedVersion: 2
-        x: 1194
-        y: 28
-        width: 6
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e227a0f31b169d40800000000000000
-      internalID: 5590685759882863336
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Lightning_16
       rect:
         serializedVersion: 2
-        x: 522
+        x: 1024
         y: 0
-        width: 46
+        width: 64
         height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -862,10 +715,10 @@ TextureImporter:
       name: Lightning_18
       rect:
         serializedVersion: 2
-        x: 1228
-        y: 14
-        width: 40
-        height: 38
+        x: 1152
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -883,10 +736,10 @@ TextureImporter:
       name: Lightning_19
       rect:
         serializedVersion: 2
-        x: 1296
-        y: 14
-        width: 36
-        height: 32
+        x: 1216
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -904,10 +757,10 @@ TextureImporter:
       name: Lightning_20
       rect:
         serializedVersion: 2
-        x: 1358
-        y: 17
-        width: 36
-        height: 29
+        x: 1280
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -925,10 +778,10 @@ TextureImporter:
       name: Lightning_22
       rect:
         serializedVersion: 2
-        x: 1420
-        y: 16
-        width: 37
-        height: 33
+        x: 1408
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -946,10 +799,10 @@ TextureImporter:
       name: Lightning_1
       rect:
         serializedVersion: 2
-        x: 1483
-        y: 16
-        width: 41
-        height: 33
+        x: 64
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -967,10 +820,10 @@ TextureImporter:
       name: Lightning_24
       rect:
         serializedVersion: 2
-        x: 1551
-        y: 16
-        width: 36
-        height: 35
+        x: 1536
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -988,10 +841,10 @@ TextureImporter:
       name: Lightning_28
       rect:
         serializedVersion: 2
-        x: 1614
-        y: 14
-        width: 37
-        height: 34
+        x: 1792
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1009,10 +862,10 @@ TextureImporter:
       name: Lightning_29
       rect:
         serializedVersion: 2
-        x: 1676
-        y: 16
-        width: 38
-        height: 34
+        x: 1856
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1030,10 +883,10 @@ TextureImporter:
       name: Lightning_30
       rect:
         serializedVersion: 2
-        x: 1738
-        y: 15
-        width: 40
-        height: 35
+        x: 1920
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1051,10 +904,10 @@ TextureImporter:
       name: Lightning_31
       rect:
         serializedVersion: 2
-        x: 1804
-        y: 16
-        width: 41
-        height: 31
+        x: 1984
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1072,10 +925,10 @@ TextureImporter:
       name: Lightning_32
       rect:
         serializedVersion: 2
-        x: 1869
-        y: 15
-        width: 38
-        height: 32
+        x: 2048
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1093,10 +946,10 @@ TextureImporter:
       name: Lightning_33
       rect:
         serializedVersion: 2
-        x: 1943
-        y: 23
-        width: 18
-        height: 22
+        x: 2112
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1114,10 +967,10 @@ TextureImporter:
       name: Lightning_34
       rect:
         serializedVersion: 2
-        x: 2003
-        y: 25
-        width: 27
-        height: 16
+        x: 2176
+        y: 0
+        width: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1127,69 +980,6 @@ TextureImporter:
       bones: []
       spriteID: 135fa67066035ea80800000000000000
       internalID: -8438285112039508687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lightning_35
-      rect:
-        serializedVersion: 2
-        x: 2066
-        y: 23
-        width: 23
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4046fb051d51c2f0800000000000000
-      internalID: -954379301049450422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lightning_37
-      rect:
-        serializedVersion: 2
-        x: 2134
-        y: 25
-        width: 20
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f471837a845fbd8a0800000000000000
-      internalID: -6279155563046103217
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lightning_41
-      rect:
-        serializedVersion: 2
-        x: 2198
-        y: 24
-        width: 17
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e3ac78d76a4ae610800000000000000
-      internalID: 1651214023258842081
       vertices: []
       indices: 
       edges: []

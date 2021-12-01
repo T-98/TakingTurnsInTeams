@@ -19,8 +19,6 @@ public class Enemy : Character
     }
 
     public override void attack() {
-        //later this will queue up moves
-        Debug.Log(this.name + " attacked " + target.name);
         target.takeDamage(damage);
     }
 
@@ -51,12 +49,15 @@ public class Enemy : Character
                 speed = 8;
                 break;
             case 2:
+                damage = 0;
                 speed = 2;
                 break;
             case 3:
+                damage = 10;
                 speed = 2;
                 break;
             case 4:
+                damage = 0;
                 speed = 7;
                 break;
             default:
@@ -68,40 +69,36 @@ public class Enemy : Character
         switch(val) {
             case 0:
                 //earthquake
-                aoeAtk(damage, 2);
-                Debug.Log("enemy used earthquake");
+                anim.Play("Golem_earthquake", 0, 0);
                 break;
             case 1:
                 //single strike
-                target.takeDamage(damage);
-                Debug.Log("enemy used single strike");
+                anim.Play("Golem_single", 0, 0);
                 break;
             case 2:
                 //enrage
-                heal(150);
+                anim.Play("Golem_enrage", 0, 0);
                 speedChange(-2);
-                Debug.Log("enemy used enrage");
                 break;
             case 3:
                 //inspire
+                anim.Play("Golem_inspire", 0, 0);
                 immune = true;
-                aoeAtk(damage, 0);
-                Debug.Log("enemy used inspire");
                 break;
             case 4:
                 //reflect
+                anim.Play("Golem_reflect", 0, 0);
                 reflection = true;
-                Debug.Log("enemy used reflect");
                 break;
             default:
                 break;
         }
     }
 
-    private void aoeAtk(int dmg, int speed) {
-        warrior.takeDamage(dmg);
-        mage.takeDamage(dmg);
-        thief.takeDamage(dmg);
+    private void aoeAtk(int speed) {
+        warrior.takeDamage(damage);
+        mage.takeDamage(damage);
+        thief.takeDamage(damage);
         warrior.speedChange(speed);
         mage.speedChange(speed);
         thief.speedChange(speed);
