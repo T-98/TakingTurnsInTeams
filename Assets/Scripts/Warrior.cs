@@ -117,10 +117,11 @@ public class Warrior : Character
             case 0:
                 //regAtk
                 anim.Play("warrior_regAtk", 0, 0);
-                //attack();
+                attack();
                 break;
             case 1:
                 anim.Play("warrior_heavyAtk", 0, 0);
+                attack();
                 break;
             case 2:
                 anim.Play("warrior_taunt", 0, 0);

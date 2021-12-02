@@ -110,6 +110,7 @@ public class Thief : Character
         {
             case 0:
                 anim.Play("thief_quick", 0, 0);
+                attack();
                 break;
             case 1: //roll the dice
                 int randomNumber = UnityEngine.Random.Range(1, 7);

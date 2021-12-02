@@ -102,17 +102,19 @@ public class Mage : Character
         {
             case 0:
                 anim.Play("mage_fire", 0, 0);
+                attack();
                 break;
             case 1:
                 enemy.speedChange(3);
                 anim.Play("mage_lighting", 0, 0);
+                attack();
                 break;
             case 2:
                 anim.Play("mage_heal", 0, 0);
                 groupHeal(30);
                 break;
             case 3:
-                anim.Play("mage_heal", 0, 0);
+                anim.Play("mage_haste", 0, 0);
                 speedChange(-2);
                 warrior.speedChange(-2);
                 thief.speedChange(-2);

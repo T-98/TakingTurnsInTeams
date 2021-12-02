@@ -70,19 +70,23 @@ public class Enemy : Character
             case 0:
                 //earthquake
                 anim.Play("Golem_earthquake", 0, 0);
+                aoeAtk(2);
                 break;
             case 1:
                 //single strike
                 anim.Play("Golem_single", 0, 0);
+                attack();
                 break;
             case 2:
                 //enrage
                 anim.Play("Golem_enrage", 0, 0);
+                heal(150);
                 speedChange(-2);
                 break;
             case 3:
                 //inspire
                 anim.Play("Golem_inspire", 0, 0);
+                aoeAtk(0);
                 immune = true;
                 break;
             case 4:
