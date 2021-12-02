@@ -132,4 +132,8 @@ public class Mage : Character
                 break;
         }
     }
+
+    public override void playDeath() {
+        anim.Play("mage_death", 0, 0);
+    }
 }

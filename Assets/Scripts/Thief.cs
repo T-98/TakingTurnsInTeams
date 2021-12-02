@@ -29,7 +29,7 @@ public class Thief : Character
 
         if(!isAlive()) {
             Debug.Log("Thief died");
-            death();
+            playDeath();
         }
     }
 
@@ -187,5 +187,9 @@ public class Thief : Character
         speedChange(val);
         warrior.speedChange(val);
         mage.speedChange(val);
+    }
+
+    public override void playDeath() {
+        anim.Play("thief_death", 0, 0);
     }
 }

@@ -34,7 +34,7 @@ public class Enemy : Character
 
         if(!isAlive()) {
             Debug.Log(charaName + " died");
-            death();
+            playDeath();
         }
     }
 
@@ -110,5 +110,9 @@ public class Enemy : Character
 
     public void resetImmune() {
         immune = false;
+    }
+
+    public override void playDeath() {
+        anim.Play("Golem_death", 0, 0);
     }
 }

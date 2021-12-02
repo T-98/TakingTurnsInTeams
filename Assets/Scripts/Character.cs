@@ -30,7 +30,7 @@ public class Character : MonoBehaviour
         Debug.Log(charaName + " took " + dmg + " dmg");
         if(!isAlive()) {
             Debug.Log(charaName + " died");
-            death();
+            this.playDeath();
         }
     }
 
@@ -119,4 +119,6 @@ public class Character : MonoBehaviour
     public virtual void execute(int val) { }
 
     public int getSpeed() { return speed + decSpeed; }
+
+    public virtual void playDeath() { }
 }

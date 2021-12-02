@@ -75,7 +75,7 @@ public class Warrior : Character
         Debug.Log("Warrior took " + dmg + " dmg");
         if(!isAlive()) {
             Debug.Log("Warrior died");
-            death();
+            anim.Play("warrior_death", 0, 0);
         }
     }
 
