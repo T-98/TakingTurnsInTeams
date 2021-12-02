@@ -151,9 +151,9 @@ public class CombatSystem : MonoBehaviour
     }
 
     public void completeTurn() {
-        warrior.refreshTurn();
-        thief.refreshTurn();
-        mage.refreshTurn();
+        if(warrior.isAlive()) warrior.refreshTurn();
+        if(thief.isAlive()) thief.refreshTurn();
+        if(mage.isAlive()) mage.refreshTurn();
         enemy.resetImmune();
         //check for character deaths
 
