@@ -121,10 +121,12 @@ public class Mage : Character
                 break;
             case 4:
                 health += 50;
+                hpPot--;
                 if (health > 150) health = 150;
                 break;
             case 5:
                 //heal(50);
+                item1--;
                 anim.Play("mage_heal", 0, 0);
                 groupHeal(50);
                 break;

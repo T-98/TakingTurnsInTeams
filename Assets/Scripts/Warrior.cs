@@ -140,6 +140,7 @@ public class Warrior : Character
                 //play berserk animation
                 berserk++;
                 incomingDamage += 10;
+                item1--;
                 break;
             case 6:
                 health = 0;

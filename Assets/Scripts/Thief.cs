@@ -170,12 +170,15 @@ public class Thief : Character
                 break;
             case 4:
                 health += 50;
+                hpPot--;
                 if (health > 60) health = 60;
                 break;
             case 5:
+                item1--;
                 feint = true;
                 break;
             case 6:
+                item2--;
                 lucky = true;
                 break;
             default:
